@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, serif;
+}
+
+#but1 {
+    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 180px;
+    height: 50px;
+}
+
+.menbut {
+    margin: 10px;
+}
+
+
+#stat {
+    font-size: 30px;
+    border: none;
+}
+
+#newmine {
+    position: absolute;
+
+}
