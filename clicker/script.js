@@ -118,7 +118,7 @@ function dob4() {
     if (Number(a) >= 5000) {
         a -= 5000;
         document.getElementById("stat").innerHTML = a;
-        document.getElementById("men4").innerHTML = "Кликер за 50000";
+        document.getElementById("men4").innerHTML = "Кликер за 5000";
         document.getElementById("men4").setAttribute('onclick', 'cl4()');
     }
 }
