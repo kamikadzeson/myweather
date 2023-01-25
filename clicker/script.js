@@ -3,132 +3,132 @@ function proc() {
     document.getElementById("stat").innerHTML = ++a;
 }
 
-function cl1() {
-    document.getElementById("men1").disabled = true;
+function cl1(id, hid) {
+    document.getElementById(id).disabled = true;
     let timerId = setInterval(proc, 500);
     let timer2 = setInterval(() => {
-        let a = document.getElementById("1").textContent;
+        let a = document.getElementById(hid).textContent;
         a--;
-        document.getElementById("1").innerHTML = a;
+        document.getElementById(hid).innerHTML = a;
     }, 1000);
     setTimeout(() => {
         clearInterval(timerId);
         clearInterval(timer2);
-        document.getElementById("1").innerHTML = 30;
-        document.getElementById("men1").disabled = false;
+        document.getElementById(hid).innerHTML = 30;
+        document.getElementById(id).disabled = false;
         }, 30000);
 }
 
-function cl5() {
-    document.getElementById("men5").disabled = true;
-    let timerId = setInterval(proc, 10);
-    let timer2 = setInterval(() => {
-        let a = document.getElementById("5").textContent;
-        a--;
-        document.getElementById("5").innerHTML = a;
-    }, 1000);
-    setTimeout(() => {
-        clearInterval(timerId);
-        clearInterval(timer2);
-        document.getElementById("5").innerHTML = 30;
-        document.getElementById("men5").disabled = false;
-    }, 30000);
-}
-
-function cl2() {
-    document.getElementById("men2").disabled = true;
+function cl2(id, hid) {
+    document.getElementById(id).disabled = true;
     let timerId = setInterval(proc, 250);
     let timer2 = setInterval(() => {
-        let a = document.getElementById("2").textContent;
+        let a = document.getElementById(hid).textContent;
         a--;
-        document.getElementById("2").innerHTML = a;
+        document.getElementById(hid).innerHTML = a;
     }, 1000);
     setTimeout(() => {
         clearInterval(timerId);
         clearInterval(timer2);
-        document.getElementById("2").innerHTML = 30;
-        document.getElementById("men2").disabled = false;
+        document.getElementById(hid).innerHTML = 30;
+        document.getElementById(id).disabled = false;
     }, 30000);
 }
 
-function cl3() {
-    document.getElementById("men3").disabled = true;
+function cl3(id, hid) {
+    document.getElementById(id).disabled = true;
     let timerId = setInterval(proc, 100);
     let timer2 = setInterval(() => {
-        let a = document.getElementById("3").textContent;
+        let a = document.getElementById(hid).textContent;
         a--;
-        document.getElementById("3").innerHTML = a;
+        document.getElementById(hid).innerHTML = a;
     }, 1000);
     setTimeout(() => {
         clearInterval(timerId);
         clearInterval(timer2);
-        document.getElementById("3").innerHTML = 30;
-        document.getElementById("men3").disabled = false;
+        document.getElementById(hid).innerHTML = 30;
+        document.getElementById(id).disabled = false;
     }, 30000);
 }
 
-function cl4() {
-    document.getElementById("men4").disabled = true;
+function cl4(id, hid) {
+    document.getElementById(id).disabled = true;
     let timerId = setInterval(proc, 50);
     let timer2 = setInterval(() => {
-        let a = document.getElementById("4").textContent;
+        let a = document.getElementById(hid).textContent;
         a--;
-        document.getElementById("4").innerHTML = a;
+        document.getElementById(hid).innerHTML = a;
     }, 1000);
     setTimeout(() => {
         clearInterval(timerId);
         clearInterval(timer2);
-        document.getElementById("4").innerHTML = 30;
-        document.getElementById("men4").disabled = false;
+        document.getElementById(hid).innerHTML = 30;
+        document.getElementById(id).disabled = false;
     }, 30000);
 }
 
-function dob1() {
+function cl5(id, hid) {
+    document.getElementById(id).disabled = true;
+    let timerId = setInterval(proc, 10);
+    let timer2 = setInterval(() => {
+        let a = document.getElementById(hid).textContent;
+        a--;
+        document.getElementById(hid).innerHTML = a;
+    }, 1000);
+    setTimeout(() => {
+        clearInterval(timerId);
+        clearInterval(timer2);
+        document.getElementById(hid).innerHTML = 30;
+        document.getElementById(id).disabled = false;
+    }, 30000);
+}
+
+function dob1(id, hid) {
     let a = document.getElementById("stat").textContent;
     if (Number(a) >= 100) {
         a -= 100;
         document.getElementById("stat").innerHTML = a;
-        document.getElementById("men1").innerHTML = "Кликер за 100";
-        document.getElementById("men1").setAttribute('onclick', 'cl1()');
+        document.getElementById(id).innerHTML = "Кликер за 100";
+        document.getElementById(id).setAttribute('onclick', "cl1('"+id+"', '"+hid+"')");
     }
 }
 
-function dob2() {
+function dob2(id, hid) {
     let a = document.getElementById("stat").textContent;
     if (Number(a) >= 500) {
         a -= 500;
         document.getElementById("stat").innerHTML = a;
-        document.getElementById("men2").innerHTML = "Кликер за 500";
-        document.getElementById("men2").setAttribute('onclick', 'cl2()');
+        document.getElementById(id).innerHTML = "Кликер за 500";
+        document.getElementById(id).setAttribute('onclick', "cl2('"+id+"', '"+hid+"')");
     }
 }
 
-function dob3() {
+function dob3(id, hid) {
     let a = document.getElementById("stat").textContent;
     if (Number(a) >= 1000) {
         a -= 1000;
         document.getElementById("stat").innerHTML = a;
-        document.getElementById("men3").innerHTML = "Кликер за 1000";
-        document.getElementById("men3").setAttribute('onclick', 'cl3()');
+        document.getElementById(id).innerHTML = "Кликер за 1000";
+        document.getElementById(id).setAttribute('onclick', "cl3('"+id+"', '"+hid+"')");
     }
 }
 
-function dob4() {
+function dob4(id, hid) {
     let a = document.getElementById("stat").textContent;
     if (Number(a) >= 5000) {
         a -= 5000;
         document.getElementById("stat").innerHTML = a;
-        document.getElementById("men4").innerHTML = "Кликер за 5000";
-        document.getElementById("men4").setAttribute('onclick', 'cl4()');
+        document.getElementById(id).innerHTML = "Кликер за 5000";
+        document.getElementById(id).setAttribute('onclick', "cl4('"+id+"', '"+hid+"')");
     }
 }
 
-function dob5() {
+function dob5(id, hid) {
     let a = document.getElementById("stat").textContent;
     if (Number(a) >= 15000) {
         a -= 15000;
         document.getElementById("stat").innerHTML = a;
-        document.getElementById("men5").innerHTML = "Кликер за 15000";
-        document.getElementById("men5").setAttribute('onclick', 'cl5()');
+        document.getElementById(id).innerHTML = "Кликер за 15000";
+        document.getElementById(id).setAttribute('onclick', "cl5('"+id+"', '"+hid+"')");
     }
 }

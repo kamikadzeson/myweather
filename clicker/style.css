@@ -14,6 +14,26 @@ body {
     margin-top: 50px;
     width: 180px;
     height: 50px;
+    position: absolute;
+}
+
+#menu2 {
+    margin-left: 230px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 180px;
+    height: 50px;
+    position: absolute;
+}
+
+#menu3 {
+    margin-left: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 180px;
+    height: 50px;
 }
 
 .menbut {
