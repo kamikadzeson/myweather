@@ -97,7 +97,7 @@
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": "Bearer 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" // Replace YOUR_API_KEY with your actual API key
+                    "Authorization": "Bearer YOUR_API_KEY" // Replace YOUR_API_KEY with your actual API key
                 },
                 body: JSON.stringify({
                     "messages": [
@@ -106,14 +106,14 @@
                     ]
                 })
             })
-                .then(response => response.json())
-                .then(data => {
-                    const reply = data.choices[0].message.content;
-                    addMessage("<b>ChatGPT:</b> " + reply);
-                })
-                .catch(error => {
-                    console.error("Error:", error);
-                });
+            .then(response => response.json())
+            .then(data => {
+                const reply = data.choices[0].message.content;
+                addMessage("<b>ChatGPT:</b> " + reply);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
         }
     }
 
